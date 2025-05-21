@@ -1,7 +1,8 @@
-# proxmox-nginx-vm-setup
+<div align="center">
+
+Nginx VM Setup
 
 ## This is a repository which simply showcases the proccess of setting up a Nginx web server
-<div align="center">
 
 ## Network Diagram
   
