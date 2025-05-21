@@ -5,5 +5,5 @@
 
 ## Network Diagram
   
-![diagram](./docs/network-diagram1.webp)
+![diagram](./docs/network-diagram.png)
 </div>
