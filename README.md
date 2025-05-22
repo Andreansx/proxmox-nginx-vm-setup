@@ -9,4 +9,7 @@
 ## Network Diagram
   
 ![diagram](./docs/network-diagram1.webp)
+<h2>Automation</h2>
 </div>
+
+**[setup-ufw.sh](./scripts/setup-ufw.sh)** - A bash script for quick setup of **Uncomplicated Firewall** security on the VM.
