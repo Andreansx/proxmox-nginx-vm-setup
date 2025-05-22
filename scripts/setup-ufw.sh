@@ -38,8 +38,7 @@ fi
 ufw allow 443/tcp comment "Web server HTTPS"
 
 echo ""
-
-read -p "$wr Are you sure you want to enable UFW ? ( [Y]es/[N]o )" confirm_enable
+read -p -e "$wr Are you sure you want to enable UFW ? ( [Y]es/[N]o )" confirm_enable
 if [[ "$confirm_enable" =~ ^[Yy]$ ]]
 then
   echo "Enabling UFW.."
