@@ -6,6 +6,8 @@
 
 ok="[  \e[1;32mOK\e[0m  ]"
 er="[  \e[1;33mERROR\e[0m  ]:"
+wr="[  \e[1;33mWARNING\e[0m  ]:"
+
 apt-get update
 if [ $? -ne 0 ]
 then
@@ -15,8 +17,9 @@ else
 fi
 
 echo "Checking for nginx existence.."
-if command ! -v nginx & /dev/null
+if command ! -v nginx &> /dev/null
 then
+  echo -e "$wr Nginx is not installed"
   echo ">>> Begining Nginx install"
   apt-get install -y nginx
   if [ $? -ne 0 ]; then;

@@ -209,8 +209,8 @@ This project includes Bash scripts to automate parts of the setup process. They 
     ```bash
     sudo ./scripts/setup-ufw.sh
     ```
-*   **(Future Script Idea) `setup-nginx.sh`:** A script to install Nginx, create a document root, and set up a basic server block.
-*   **(Future Script Idea) `basic-harden.sh`:** A script for basic server hardening tasks (e.g., installing Fail2ban).
+*   **[`setup-nginx.sh`](./scripts/setup-nginx.sh):** A script to install Nginx, create a document root, and set up a basic server block.
+*   **[`basic-harden.sh`](./scripts/basic-harden.sh):** A script for basic server hardening tasks (e.g., installing Fail2ban).
 
 ## Testing
 
@@ -220,5 +220,5 @@ This project includes Bash scripts to automate parts of the setup process. They 
 
 
 <div align="center">
-Made with ❤️ and a lot of learning!
+Made with ❤️ and some learning!
 </div>
