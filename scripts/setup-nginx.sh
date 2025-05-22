@@ -12,5 +12,11 @@ then
 else
   echo -e "$ok Sucessfully updated package list"
 fi
-echo ">>> Begining Nginx install"
-apt-get install nginx
+
+echo "Checking for nginx existence.."
+if command ! -v nginx & /dev/null
+then
+  echo ">>> Begining Nginx install"
+  apt-get install nginx
+  if [ $? -ne 0 ]; then; 
+  
