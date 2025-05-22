@@ -3,13 +3,13 @@
 
 # Nginx VM Setup on Proxmox VE
 ![Nginx](https://img.shields.io/badge/nginx-%23009639?style=for-the-badge&logo=nginx&logoColor=white&logoSize=auto)
-![Debian](https://img.shields.io/badge/Debian-A81D33?style=for-the-badge&logo=debian&logoColor=white)
-![Proxmox VE](https://img.shields.io/badge/Proxmox%20VE-E57000?style=for-the-badge&logo=proxmox&logoColor=white)
 ![Bash](https://img.shields.io/badge/bash-%234EAA25?style=for-the-badge&logo=gnubash&logoColor=white&logoSize=auto)
+![Proxmox VE](https://img.shields.io/badge/Proxmox%20VE-E57000?style=for-the-badge&logo=proxmox&logoColor=white)
+![Debian](https://img.shields.io/badge/Debian-A81D33?style=for-the-badge&logo=debian&logoColor=white)
 
 This project documents the process of setting up an Nginx web server on a Debian 12 Virtual Machine (VM) hosted in a Proxmox VE environment. The primary goal is to demonstrate and learn about network configuration, basic server hardening, and automation using Bash scripting.
 
-The VM is intended to host a static website, in this case, [Staszic360]([LINK TO STASZIC360 PROJECT IF AVAILABLE, OR REMOVE THIS PART]) - a virtual tour of my high school.
+The VM is intended to host a static website, in this case, [Staszic360]([https://github.com/andreansx/Staszic360]) - a virtual tour of my high school.
 
 </div>
 
@@ -29,12 +29,6 @@ The VM is intended to host a static website, in this case, [Staszic360]([LINK TO
     *   [Nginx Installation & Configuration](#nginx-installation--configuration)
     *   [Deploying the Static Site (Staszic360)](#deploying-the-static-site-staszic360)
 7.  [Automation Scripts](#automation-scripts)
-8.  [Testing](#testing)
-9.  [Future Improvements](#future-improvements)
-10. [Contributing](#contributing)
-
----
-
 ## Project Goal
 
 *   To build and configure an Nginx web server on a Debian 12 VM within Proxmox VE.
@@ -44,7 +38,7 @@ The VM is intended to host a static website, in this case, [Staszic360]([LINK TO
 
 ## Target Configuration
 
-*   **Proxmox VE Host:** [e.g., Dell R710, version 7.x] with at least two network interfaces (`eno1`, `eno2`).
+*   **Proxmox VE Host:** Dell PowerEdge R710 with at least two network interfaces (`eno1`, `eno2`).
     *   IP Address (on `vmbr0`): `10.0.0.130/24`
 *   **VM (ID 108):** Debian 12 (Minimal installation + SSH Server)
     *   Static IP Address: `10.0.0.208/24`
@@ -69,12 +63,12 @@ The VM is intended to host a static website, in this case, [Staszic360]([LINK TO
 
 ## Technologies Used
 
-*   **Virtualization:** Proxmox VE [YOUR PROXMOX VERSION]
+*   **Virtualization:** Proxmox VE 8.4.1
 *   **VM Operating System:** Debian 12 "Bookworm"
 *   **Web Server:** Nginx
 *   **Firewall:** UFW (Uncomplicated Firewall)
 *   **Scripting:** Bash
-*   **Client OS (for testing):** [e.g., Windows 10, Linux Mint] on ThinkPad T450s
+*   **Client OS (for testing):** Windows 11 on ThinkPad T450s
 
 ## Prerequisites
 
