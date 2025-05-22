@@ -3,6 +3,7 @@
 # Remember, This file needs to have execute permissions
 # Run this comand: chmod +x ./setup-ufw.sh
 # Run this script with sudo permissions: sudo ./setup-ufw.sh
+# Tested on Debian 12.11.0
 
 echo "Starting the configuration setup for UFW..."
 
