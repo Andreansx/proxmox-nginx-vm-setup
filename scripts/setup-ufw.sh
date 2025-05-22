@@ -23,11 +23,11 @@ then
   echo -e "$ok Sucessfulyl insttalled UFW\n"
 fi
 
-echo "Setting up default policies..."
+echo -e "$ok Setting up default policies..."
 ufw default deny incoming
 ufw default allow outgoing
 
-echo "Setting up specific rules..."
+echo -e "$ok Setting up specific rules..."
 ufw allow 80/tcp comment "Web server HTTP"
 if [ $? -ne 0 ]
 then
@@ -39,7 +39,7 @@ ufw allow 443/tcp comment "Web server HTTPS"
 
 echo ""
 
-read -p "Are you sure you want to enable UFW ? ( [Y]es/[N]o )" confirm_enable
+read -p "$wr Are you sure you want to enable UFW ? ( [Y]es/[N]o )" confirm_enable
 if [[ "$confirm_enable" =~ ^[Yy]$ ]]
 then
   echo "Enabling UFW.."
