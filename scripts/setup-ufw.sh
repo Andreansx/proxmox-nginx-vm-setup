@@ -13,7 +13,9 @@ wr="[  \e[1;33mWARNING\e[0m  ]:"
 if ! command -v ufw &> /dev/null
 then
   echo "UFW is not installed"
+  echo -e ">>> Starting entire system upgrade\n"
   apt-get update
+  apt-get upgrade -y
   apt-get install -y ufw
   if [ $? -ne 0 ]
   then
@@ -67,3 +69,5 @@ echo ""
 echo -e "$ok Showing current UFW status.."
 
 ufw status verbose
+
+echo -e "$ok Finished setup\n\n"
