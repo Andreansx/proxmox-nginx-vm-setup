@@ -33,9 +33,18 @@ if [ $? -ne 0 ]
 then
   echo -e "$er Couldn't setup HTTP rule"
   exit 1
+else
+  echo -e "$ok Set up HTTP rule"
 fi
 
 ufw allow 443/tcp comment "Web server HTTPS"
+if [ $? -ne 0 ]
+then
+  echo -e "$er Couldn't setup HTTPS rule"
+  exit 1
+else
+  echo -e "$ok Set up HTTPS rule"
+fi
 
 echo -e "$wr"
 read -p "Are you sure you want to enable UFW ? ( [Y]es/[N]o )" confirm_enable
