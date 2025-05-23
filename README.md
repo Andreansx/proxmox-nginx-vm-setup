@@ -130,7 +130,7 @@ iface ens18 inet static
     dns-nameservers 8.8.8.8 1.1.1.1 # Replace with your preferred DNS
 ```
 Apply changes: `sudo systemctl restart networking` or `sudo reboot`. Reconnect via SSH using the new static IP.
-*See example configuration: [`configs/network/interfaces`](./configs/network/interfaces)*
+*See example configuration: [`/etc/network/interfaces`](./interfaces)*
 
 ### Firewall (UFW) Setup
 Set up basic firewall rules using UFW.
@@ -144,7 +144,7 @@ sudo ufw enable        # Type 'y' and press Enter
 sudo ufw status verbose
 ```
 Alternatively, use the automation script: `sudo ./scripts/setup-ufw.sh`.
-*See example UFW status: [`configs/ufw/ufw-rules.txt`](./configs/ufw/ufw-rules.txt)*
+<!--*See example UFW status: [`configs/ufw/ufw-rules.txt`](./configs/ufw/ufw-rules.txt)*-->
 
 ### Nginx Installation & Configuration
 1.  Install Nginx:
@@ -184,7 +184,7 @@ Alternatively, use the automation script: `sudo ./scripts/setup-ufw.sh`.
     sudo nginx -t
     sudo systemctl reload nginx
     ```
-*See example Nginx configuration: [`configs/nginx/staszic360`](./configs/nginx/staszic360)*
+*See example Nginx configuration: [`/etc/nginx/sites-available/staszic360`](./nginx/default.conf)*
 
 ### Deploying the Static Site (Staszic360)
 1.  Copy your static site files (e.g., Staszic360 project) to `/var/www/staszic360/` on the VM. You can use `scp`:
