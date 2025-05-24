@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Remember, This file needs to have execute permissions
-# Run this comand: chmod +x ./setup-ufw.sh
+# Run this comand: sudo chmod +x ./setup-ufw.sh
 # Run this script with sudo permissions: sudo ./setup-ufw.sh
 # Tested on Debian 12.11.0
 
@@ -25,11 +25,13 @@ then
   echo -e "$ok Sucessfulyl insttalled UFW\n"
 fi
 
-echo -e "$ok Setting up default policies..."
+echo -e "Setting up default policies..."
 ufw default deny incoming
 ufw default allow outgoing
+echo -e "$ok Sucessfully set up defaulf policies"
 
 echo -e "$ok Setting up specific rules..."
+
 ufw allow 80/tcp comment "Web server HTTP"
 if [ $? -ne 0 ]
 then
